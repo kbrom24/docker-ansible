@@ -41,7 +41,7 @@
      copy: src=files/gunicorn.conf.py  dest={{ mezzanine_proj_path }} /gunicorn.conf.py
  
    - name: collect static assets into the appropriate directory
-     diango_manage: command=collectstatic app_path={{ mezzanine_proj_path }}
+     django_manage: command=collectstatic app_path={{ mezzanine_proj_path }}
      environment:
        SECRET_KEY: nonblanksecretkey
     
