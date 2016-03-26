@@ -35,7 +35,7 @@
      pip: requirments={{ mezzanine_project_path }}/{{ mezzanine_reqs_path }} 
   
    - name: generate the settins file
-      copy: src=files/local_settings.py dest={{ mezzanine_proj_path }}/local_settings.py
+     copy: src=files/local_settings.py dest={{ mezzanine_proj_path }}/local_settings.py
    
    - name: set the gunicorn config file
      copy: src=files/gunicorn.conf.py  dest={{ mezzanine_proj_path }} /gunicorn.conf.py
