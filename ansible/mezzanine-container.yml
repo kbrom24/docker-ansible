@@ -9,7 +9,7 @@
   tasks:
    - name: install apt packages
      apt: pkg={{ item }} update_cache=yes cache_valid_time=3600
-     with_itmes:
+     with_items:
         - git 
         - gunicorn
         - libjpeg-dev
@@ -26,7 +26,7 @@
         accept_hostkey: yes
    - name: install required python packages
      pip: name={{ item }}
-     with_itmes:
+     with_items:
         - south
         - psycopg2
         - django-compressor
